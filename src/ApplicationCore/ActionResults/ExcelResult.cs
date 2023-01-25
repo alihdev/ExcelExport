@@ -25,6 +25,8 @@ namespace Fingers10.ExcelExport.ActionResults
             SheetName = sheetName;
             FileName = fileName;
             Columns = columns == null ? new List<ExcelColumnDefinition>() : columns;
+
+            ExcelColumnDefinition.ReOrderIfNeed(Columns);
         }
 
         /// <summary>

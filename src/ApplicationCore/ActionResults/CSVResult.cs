@@ -39,6 +39,8 @@ namespace Fingers10.ExcelExport.ActionResults
             {
                 Columns.Add(new ExcelColumnDefinition(item.Item1, item.Item2, item.Item3));
             }
+
+            ExcelColumnDefinition.ReOrderIfNeed(Columns);
         }
 
         public CSVResult(IEnumerable<T> data, string fileName, params (string, string, int)[] definitions)
